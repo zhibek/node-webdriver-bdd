@@ -23,3 +23,13 @@ Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.
 * **And** I click "Google Search"
 * **Then** I should see the results page
 * **And** I see "test" in the search input
+
+## Command
+
+See below for a sample command to run the tests:
+
+```
+npm install 
+  && ./node_modules/bower/bin/bower install --allow-root --config.interactive=false 
+  && ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS
+```
