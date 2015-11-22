@@ -26,10 +26,9 @@ Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.
 
 ## Command
 
-See below for a sample command to run the tests:
+See below for the command to run the tests:
 
 ```
 npm install 
-  && ./node_modules/bower/bin/bower install --allow-root --config.interactive=false 
-  && ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS
+  && ./node_modules/webdriverio/bin/wdio
 ```
