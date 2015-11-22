@@ -1,0 +1,35 @@
+{
+  "name": "node-webdriver-bdd",
+  "version": "0.0.0",
+  "description": "Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zhibek/node-webdriver-bdd.git"
+  },
+  "author": "Mohamed Labib",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/zhibek/node-webdriver-bdd/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "karma": "~0.13.15",
+    "phantomjs": "~1.9.18",
+    "jasmine-core": "~2.3.4",
+    "webdriverio": "~3.2.6",
+    "requirejs": "~2.1.22",
+    "karma-requirejs": "~0.2.2",
+    "karma-jasmine": "~0.3.6",
+    "karma-phantomjs-launcher": "~0.2.1",
+    "grunt-karma": "~0.12.1",
+    "grunt-cli": "~0.1.13",
+    "jasmine-node": "~1.14.5"
+  }
+}
