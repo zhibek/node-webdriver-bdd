@@ -4,8 +4,7 @@ Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.
 
 ## Tools
 
-* *Karma* (**Test runner**) http://karma-runner.github.io/0.13/intro/how-it-works.html
-* *Mocha* OR *Jasmine* (**Test description**) - https://mochajs.org/#assertions OR http://jasmine.github.io/2.3/introduction.html
+* *Jasmine* (**Test description**) - http://jasmine.github.io/2.3/introduction.html
 * *WebdriverIO* aka WebdriverJS (**Browser control layer**) - http://webdriver.io/
 * *PhantomJS* (**Headless browser**) - http://phantomjs.org/
 
@@ -26,16 +25,17 @@ Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.
 
 ## Command
 
-See below for a sample command to run the tests:
-
-```
-npm install 
-  && ./node_modules/bower/bin/bower install --allow-root --config.interactive=false 
-  && ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS
-```
-
-Actual command
-
 ```
   npm install && node_modules/.bin/wdio wdio.conf.js
 ```
+
+## Steps to build a test case
+
+* Create a new test file with naming format spec/**/*Spec.js where dir containing test file is not called 'support'
+** Test file should look like spec/POC/testSpec.js
+* Titles in it method are converted to method names by removing spaces, hyphens and underscores, And camel casing the remaining text
+** Title to method name conversion look like 'go to original-page' -> 'goToOriginalPage'
+* Actual methods should exist inside spec/support/context 
+** Context file should look like spec/support/context/mainContext.js
+* Then add entry to load the new context inside spec/support/context/index.js
+** New context entry should look like `exports.xContext = require("./xContext.js");`
