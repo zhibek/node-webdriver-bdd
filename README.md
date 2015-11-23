@@ -33,6 +33,7 @@ Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.
 
 * Create a new test file with naming format spec/**/*Spec.js where dir containing test file is not called 'support'
  * Test file should look like spec/POC/testSpec.js
+ * 'it' in jasmine is replace by 'given', 'when', 'then', 'and', and 'but'
 * Titles in it method are converted to method names by removing spaces, hyphens and underscores, And camel casing the remaining text
  * Title to method name conversion look like 'go to original-page' -> 'goToOriginalPage'
 * Actual methods should exist inside spec/support/context 

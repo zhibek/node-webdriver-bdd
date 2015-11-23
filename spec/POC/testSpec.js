@@ -7,11 +7,11 @@ require('./../support/core');
 
 describe('Google search POC', function () {
     
-    it('open google homepage' );
-    it('check webpage title' );
-    it('check search input value being empty' );
-    it('fill search input' );
-    it('click search button' );
-    it('check search input value being searched-for value' );
-    it('check search results webpage changed url' );
+    given('open google homepage' );
+        and('check webpage title' );
+        but('check search input value being empty' );
+    when('fill search input' );
+        and('click search button' );
+    then('check search input value being searched-for value' );
+        and('check search results webpage changed url' );
 });
