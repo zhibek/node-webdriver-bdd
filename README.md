@@ -32,14 +32,10 @@ Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.
 ## Steps to build a test case
 
 * Create a new test file with naming format spec/**/*Spec.js where dir containing test file is not called 'support'
-
-** Test file should look like spec/POC/testSpec.js
+ * Test file should look like spec/POC/testSpec.js
 * Titles in it method are converted to method names by removing spaces, hyphens and underscores, And camel casing the remaining text
-
-** Title to method name conversion look like 'go to original-page' -> 'goToOriginalPage'
+ * Title to method name conversion look like 'go to original-page' -> 'goToOriginalPage'
 * Actual methods should exist inside spec/support/context 
-
-** Context file should look like spec/support/context/mainContext.js
+ * Context file should look like spec/support/context/mainContext.js
 * Then add entry to load the new context inside spec/support/context/index.js
-
-** New context entry should look like `exports.xContext = require("./xContext.js");`
+ * New context entry should look like `exports.xContext = require("./xContext.js");`
