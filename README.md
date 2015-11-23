@@ -33,3 +33,9 @@ npm install
   && ./node_modules/bower/bin/bower install --allow-root --config.interactive=false 
   && ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS
 ```
+
+Actual command
+
+```
+  npm install && node_modules/.bin/wdio wdio.conf.js
+```
