@@ -8,9 +8,6 @@ var functionOveride = function () {
     var specTitle = argumentsArray[0];
     var specFunction = argumentsArray[1];
 
-    /**
-     * callback arguments got request, user handles async
-     */
     if (typeof specFunction === 'undefined') {
 
         var expectedSpecFunctionName = humanify.camelize(specTitle);
@@ -22,9 +19,12 @@ var functionOveride = function () {
             }
         }
         specFunction = expectedSpecFunction;
-        return origFunctionName.call(null, specTitle, specFunction);
     }
-    else if (specFunction.length === 1) {
+    
+    /**
+     * callback arguments got request, user handles async
+     */
+    if (specFunction.length === 1) {
         return origFunctionName.call(null, specTitle, specFunction);
     }
 
