@@ -3,7 +3,7 @@
  *
  */
 
-require('./../support/core');
+require('./../../support/backendCore');
 
 describe('Google search POC', function () {
     

@@ -1,1 +1,0 @@
-exports.mainContext = require("./mainContext.js");

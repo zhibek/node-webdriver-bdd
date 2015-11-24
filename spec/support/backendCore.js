@@ -1,5 +1,5 @@
 var humanify = require('./../support/helpers/humanify');
-var contexts = require('./../support/context');
+var contexts = require('./../support/context/backend');
 
 var origFunctionName = global['it'];
 var acceptableFunctionNames = ['given', 'when', 'then', 'and', 'but'];

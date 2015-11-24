@@ -1,5 +1,4 @@
-var exports = module.exports = {};
-exports.camelize = function (stringToBeCamelized) {
+camelize = function (stringToBeCamelized) {
     // spaces ,hyphens and underscores are removed and next letter after any of them becomes capitalcase
     return stringToBeCamelized.replace(/^([A-Z])|[\s-_](\w)/g, function (match, p1, p2, offset) {
         // first letter of any word other than the first one will start with capital letter
@@ -9,3 +8,7 @@ exports.camelize = function (stringToBeCamelized) {
         return p1.toLowerCase();
     });
 };
+if (typeof module !== 'undefined'){
+    var exports = module.exports = {};
+    exports.camelize = camelize;
+}

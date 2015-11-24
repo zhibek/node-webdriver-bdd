@@ -4,7 +4,7 @@
   "description": "Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/grunt test:dev"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,15 @@
   "devDependencies": {
     "webdriverio": "~3.2.6",
     "jasmine": "~2.3.2",
-    "phantomjs-server": "~1.9.13"
+    "phantomjs-server": "~1.9.13",
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-webdriver": "~1.0.0",
+    "phantomjs": "~1.9.18",
+    "karma-jasmine": "~0.3.6",
+    "karma-phantomjs-launcher": "~0.2.1",
+    "karma": "~0.13.15",
+    "grunt-karma": "~0.12.1",
+    "karma-spec-reporter": "0.0.22"
   }
 }
