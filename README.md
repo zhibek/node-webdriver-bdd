@@ -4,7 +4,9 @@ Proof-of-concept, basic setup to run Webdriver BDD tests on NodeJS.
 
 ## Tools
 
-* *Jasmine* (**Test description**) - http://jasmine.github.io/2.3/introduction.html
+* *Grunt* (**Task runner**) - http://gruntjs.com/getting-started
+* *Karma* (**Test runner**) - http://karma-runner.github.io/0.13/intro/how-it-works.html
+* *Jasmine* (**Test framework**) - http://jasmine.github.io/2.3/introduction.html
 * *WebdriverIO* aka WebdriverJS (**Browser control layer**) - http://webdriver.io/
 * *PhantomJS* (**Headless browser**) - http://phantomjs.org/
 
