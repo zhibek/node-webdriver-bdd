@@ -1,9 +1,8 @@
 module.exports = function (grunt) {
 
-    // Project configuration.
+    // Set up webdriver to read from wdio.conf.js (default config file)
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // webdriver tests
         webdriver: {
             dev: {
                 configFile: './wdio.conf.js'
@@ -11,8 +10,10 @@ module.exports = function (grunt) {
         },
     });
 
-    // Load the plugin that provides the "webdriver" task.
+    // setup webdriver:dev to execute webdriver tests
     grunt.loadNpmTasks('grunt-webdriver');
-    
+
+    // setup test:dev as a shortcut to webdriver:dev
     grunt.registerTask('test:dev', ['webdriver:dev']);
+
 };

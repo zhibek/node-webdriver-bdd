@@ -1,8 +1,13 @@
-var humanify = require('./../support/helpers/humanify');
-var contexts = require('./../support/context');
+/**
+ * Helper to override standard Jasmine "it" function with multiple function names
+ */
+
+var humanify = require('./humanify');
+var contexts = require('./../../contexts');
 
 var origFunctionName = global['it'];
 var acceptableFunctionNames = ['given', 'when', 'then', 'and', 'but'];
+
 var functionOveride = function () {
     var argumentsArray = Array.prototype.slice.call(arguments);
     var specTitle = argumentsArray[0];
@@ -30,6 +35,7 @@ var functionOveride = function () {
 
     return runSpec(specTitle, specFunction);
 };
+
 for (var functionNameKey in acceptableFunctionNames) {
     global[acceptableFunctionNames[functionNameKey]] = functionOveride;
-};
+}
